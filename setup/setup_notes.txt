@@ -1,0 +1,40 @@
+
+1) Install Anaconda Python
+
+https://www.anaconda.com/distribution/
+
+2) Use the provided environment.yml file in the setup folder to replicate my environment. 
+
+Zipline cannot run in the most recent version of Python (3.8) so you first have to create an environment for Python 3.5., then add the required packages.
+
+Once Annaconda is installed you can replicate my environment with the following command
+
+conda env create -f environment.yml
+
+The following resource  is helpful for troubleshooting:
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment
+
+3) Apply zipline bug fixes
+
+You will need to edit a number of .py files associated with Zipline. Follow the instructions found under the link immediately beginning from the 'Zipline installation best practice' section:
+
+https://pypi.org/project/zipline-norgatedata/ 
+
+The edited files I use are available in my repository in the setup folder.
+
+The paths on your box will be something like this where you replace 'Derek' with your own user.
+
+C:\Users\Derek\Anaconda3\envs\env_zipline\Lib\site-packages\zipline\data
+C:\Users\Derek\Anaconda3\envs\env_zipline\Lib\site-packages\trading_calendars
+
+4) Create data bundles
+
+Finally, you will have to create some 'bundles'. The extension.py file in the setup folder contains the equity bundles I use for various different things.
+
+On my desktop it is located under
+
+C:\Users\Derek\.zipline
+
+Instructions can be found under the 'Bundle Creation' section of the zipline-norgatedata docs referenced above.
+
+
